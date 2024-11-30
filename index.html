@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon X Token</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#">Elon X</a>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#tokenomics" class="nav-link">Tokenomics</a></li>
+                <li class="nav-item"><a href="#airdrop" class="nav-link">Airdrop</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="brand-tag">By Elon Musk</div>
+            <h1>Elon X Token <span class="highlight">3X Returns</span></h1>
+            <p class="hero-description">Join Elon Musk's revolutionary crypto investment platform. Deposit any cryptocurrency and instantly receive triple your investment through the power of X (formerly Twitter) technology.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3X</span>
+                    <span class="stat-label">Instant Returns</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">X</span>
+                    <span class="stat-label">Powered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Potential</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#invest" class="cta-button invest">Get Your X Tokens</a>
+                <a href="#how-it-works" class="secondary-button">Learn More</a>
+            </div>
+        </div>
+        <div class="elon-badge">
+            <i class="fab fa-twitter"></i> Official Elon X Token
+        </div>
+    </section>
+
+        <!-- How To Section -->
+    <section class="how-to-section">
+        <div class="how-to-container">
+            <h2>How It Works</h2>
+            <div class="how-to-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Choose a Chain</h3>
+                    <p>Select your preferred blockchain network for your investment transaction</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Invest Using Generated Address</h3>
+                    <p>Send your investment to the secure wallet address provided</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Add Your Wallet Address</h3>
+                    <p>Enter your wallet address matching your selected chain type</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Get 3X Returns Instantly</h3>
+                    <p>Receive triple your investment amount immediately to your wallet</p>
+                </div>
+            </div>
+            <div class="timer-cta" style="text-align: center;">
+                <a href="#invest" class="invest-button invest">Invest Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="timer-section">
+        <div class="timer-container">
+            <h2>Limited Time Opportunity</h2>
+            <p class="timer-description">Don't miss out on this exclusive 3X return offer</p>
+            <div class="countdown-timer">
+                <div class="timer-item">
+                    <span id="days" class="time">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="timer-item">
+                    <span id="hours" class="time">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="timer-item">
+                    <span id="minutes" class="time">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="timer-item">
+                    <span id="seconds" class="time">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+            <div class="timer-cta">
+                <a href="#invest" class="invest-button invest">Invest Now</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Recent Activities Section -->
+    <section class="recent-activities">
+        <div class="container">
+            <div class="section-header" style="padding: 0 2em; color: #fff;">
+                <h2>Recent Activities</h2>
+                <br>
+                <p>Live transactions from our investors</p>
+            </div>
+            <div class="activities-wrapper">
+                <div class="table-container">
+                    <table class="activities-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Wallet Address</th>
+                                <th>Network</th>
+                                <th>Investment</th>
+                                <th>Return (3X)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activitiesTableBody">
+                            <!-- Table rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="live-indicator">
+                    <span class="pulse"></span>
+                    Live Updates
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="investModal">
+        <div class="modal-container">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>Invest in Elon X Token</h2>
+                <p>Choose your preferred blockchain network</p>
+            </div>
+            <div class="modal-body">
+                <div class="chain-tabs">
+                    <div class="chain-tab active" data-chain="ethereum">
+                        <i class="fab fa-ethereum"></i>
+                        Ethereum
+                    </div>
+                    <div class="chain-tab" data-chain="solana">
+                        <i class="fas fa-sun"></i>
+                        Solana
+                    </div>
+                    <div class="chain-tab" data-chain="polygon">
+                        <i class="fas fa-polygon"></i>
+                        Polygon
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="receiver-address">Your Wallet Address</label>
+                    <input type="text" id="receiver-address" placeholder="Enter your wallet address" required>
+                </div>
+
+                <div class="chain-content active" id="ethereum-content">
+                    <div class="chain-header">
+                        <div class="chain-icon">
+                            <i class="fab fa-ethereum"></i>
+                        </div>
+                        <div class="chain-info">
+                            <h3>Ethereum Network</h3>
+                            <p>ERC-20 Token Standard</p>
+                        </div>
+                    </div>
+                    <p style="color: #fff;">Send ETH to the following address:</p>
+                    <div class="wallet-address">0xD1398862b3C82C4E450621e1D9731E937993543b</div>
+                    <div class="chain-note">
+                        <strong>Note:</strong> Only send ETH from a wallet you own. Exchanges are not supported.
+                    </div>
+                </div>
+
+                <div class="chain-content" id="solana-content">
+                    <div class="chain-header">
+                        <div class="chain-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="chain-info">
+                            <h3>Solana Network</h3>
+                            <p>SPL Token Standard</p>
+                        </div>
+                    </div>
+                    <p style="color: #fff;">Send SOL to the following address:</p>
+                    <div class="wallet-address">EretoHHtECm6Pq1ix5cqBjgnWgxVWZdLBhuZwAu3KLSy</div>
+                    <div class="chain-note">
+                        <strong>Note:</strong> Ensure you're sending SOL on the Solana network.
+                    </div>
+                </div>
+
+                <div class="chain-content" id="polygon-content">
+                    <div class="chain-header">
+                        <div class="chain-icon">
+                            <i class="fas fa-polygon"></i>
+                        </div>
+                        <div class="chain-info">
+                            <h3>Polygon Network</h3>
+                            <p>MATIC Token Standard</p>
+                        </div>
+                    </div>
+                    <p style="color: #fff;">Send MATIC to the following address:</p>
+                    <div class="wallet-address">0xD1398862b3C82C4E450621e1D9731E937993543b</div>
+                    <div class="chain-note">
+                        <strong>Note:</strong> Only use the Polygon network for this address.
+                    </div>
+                </div>
+
+                <div class="investment-details">
+                    <div class="input-group">
+                        <label for="amount">Investment Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="returnAmount">Expected Return (3X)</label>
+                        <input type="text" id="returnAmount" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-button" id="investButton">Complete Transaction</button>
+                <div class="transaction-message" id="transactionMessage">
+                    <div class="loading-spinner"></div>
+                    <p>Your transaction is being processed. Please wait for a few hours while we process your investment.</p>
+                    <p class="transaction-note">You will receive your tokens automatically once the transaction is complete.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- About Section start -->
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-content">
+            <h2>Why Choose Elon X Token?</h2>
+            <p>Experience the future of crypto investment with our revolutionary 3X return platform. We've simplified the process of maximizing your crypto assets while maintaining the highest standards of security and efficiency.</p>
+            
+            <div class="about-features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Instant Returns</h4>
+                        <p>Get your 3X returns immediately after investment verification</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Secure Platform</h4>
+                        <p>Advanced encryption and secure blockchain technology</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Multi-Chain Support</h4>
+                        <p>Compatible with multiple blockchain networks</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>No KYC Required</h4>
+                        <p>Start investing instantly without lengthy verification</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-image">
+            <img src="./assets/about.png" alt="Elon X Token Investment Platform">
+        </div>
+    </div>
+</section>
+
+
+<!-- Tokenomics Section -->
+<section class="tokenomics-section">
+    <div class="tokenomics-container">
+        <div class="tokenomics-header">
+            <h2>Tokenomics</h2>
+            <p>Our token distribution is designed to ensure long-term sustainability and maximize value for all stakeholders.</p>
+        </div>
+
+        <div class="tokenomics-grid">
+            <div class="tokenomics-card">
+                <div class="tokenomics-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Community</h3>
+                <div class="percentage">50%</div>
+                <p>Reserved for community rewards, staking, and ecosystem growth</p>
+            </div>
+
+            <div class="tokenomics-card">
+                <div class="tokenomics-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Liquidity</h3>
+                <div class="percentage">30%</div>
+                <p>Locked to ensure stable trading and price support</p>
+            </div>
+
+            <div class="tokenomics-card">
+                <div class="tokenomics-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Development</h3>
+                <div class="percentage">20%</div>
+                <p>Allocated for ongoing development and marketing initiatives</p>
+            </div>
+        </div>
+
+        <div class="allocation-bars">
+            <div class="allocation-bar">
+                <div class="allocation-info">
+                    <span class="allocation-label">Community Pool</span>
+                    <span class="allocation-value">50%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 50%"></div>
+                </div>
+            </div>
+
+            <div class="allocation-bar">
+                <div class="allocation-info">
+                    <span class="allocation-label">Liquidity Pool</span>
+                    <span class="allocation-value">30%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 30%"></div>
+                </div>
+            </div>
+
+            <div class="allocation-bar">
+                <div class="allocation-info">
+                    <span class="allocation-label">Development Fund</span>
+                    <span class="allocation-value">20%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 20%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tesla Electric Vehicles</h3>
+                <div class="tesla-links">
+                    <a href="https://www.tesla.com/models" class="tesla-link" target="_blank">
+                        <i class="fas fa-car"></i>
+                        <div class="tesla-link-text">
+                            <h4>Model S</h4>
+                            <p>Luxury Electric Sedan</p>
+                        </div>
+                    </a>
+                    <a href="https://www.tesla.com/model3" class="tesla-link" target="_blank">
+                        <i class="fas fa-car"></i>
+                        <div class="tesla-link-text">
+                            <h4>Model 3</h4>
+                            <p>All-Electric Sedan</p>
+                        </div>
+                    </a>
+                    <a href="https://www.tesla.com/modelx" class="tesla-link" target="_blank">
+                        <i class="fas fa-car-side"></i>
+                        <div class="tesla-link-text">
+                            <h4>Model X</h4>
+                            <p>Electric SUV</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Elon X Token is revolutionizing the crypto space with instant 3X returns and seamless integration with Tesla's ecosystem. Join us in shaping the future of digital assets.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="tesla-links">
+                    <a href="https://www.tesla.com/cybertruck" class="tesla-link" target="_blank">
+                        <i class="fas fa-truck-pickup"></i>
+                        <div class="tesla-link-text">
+                            <h4>Cybertruck</h4>
+                            <p>Electric Pickup Truck</p>
+                        </div>
+                    </a>
+                    <a href="https://www.tesla.com/modely" class="tesla-link" target="_blank">
+                        <i class="fas fa-car-side"></i>
+                        <div class="tesla-link-text">
+                            <h4>Model Y</h4>
+                            <p>Electric Compact SUV</p>
+                        </div>
+                    </a>
+                    <a href="https://www.tesla.com/powerwall" class="tesla-link" target="_blank">
+                        <i class="fas fa-battery-full"></i>
+                        <div class="tesla-link-text">
+                            <h4>Powerwall</h4>
+                            <p>Home Energy Storage</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elon X Token. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
